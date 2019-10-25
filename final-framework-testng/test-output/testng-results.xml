@@ -2,88 +2,68 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="27358" started-at="2018-12-18T18:16:26Z" finished-at="2018-12-18T18:16:53Z">
+  <suite name="eLearning test Suite" duration-ms="75106" started-at="2019-10-25T22:53:37 IST" finished-at="2019-10-25T22:54:53 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="27358" started-at="2018-12-18T18:16:26Z" finished-at="2018-12-18T18:16:53Z">
-      <class name="com.training.regression.tests.LoginExcelTest">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="setUpBeforeClass" is-config="true" duration-ms="15" started-at="2018-12-18T23:46:26Z" finished-at="2018-12-18T23:46:26Z">
+    <test name="LogOut_ELTC_016" duration-ms="27393" started-at="2019-10-25T22:53:37 IST" finished-at="2019-10-25T22:54:05 IST">
+      <class name="com.training.sanity.tests.LogOut_ELTC_016">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:com.training.sanity.tests.LogOut_ELTC_016@6325a3ee]" name="Setup" is-config="true" duration-ms="29" started-at="2019-10-25T22:53:38 IST" finished-at="2019-10-25T22:53:38 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="setUp" is-config="true" duration-ms="5796" started-at="2018-12-18T23:46:27Z" finished-at="2018-12-18T23:46:32Z">
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="LaunchURL()[pri:0, instance:com.training.sanity.tests.LogOut_ELTC_016@6325a3ee]" name="LaunchURL" is-config="true" duration-ms="17203" started-at="2019-10-25T22:53:38 IST" finished-at="2019-10-25T22:53:55 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginDBTest(java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="loginDBTest" duration-ms="2700" started-at="2018-12-18T23:46:32Z" data-provider="excel-inputs" finished-at="2018-12-18T23:46:35Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[hello]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin@123]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- LaunchURL -->
+        <test-method status="PASS" signature="LogoutTest()[pri:0, instance:com.training.sanity.tests.LogOut_ELTC_016@6325a3ee]" name="LogoutTest" duration-ms="8221" started-at="2019-10-25T22:53:55 IST" finished-at="2019-10-25T22:54:03 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginDBTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="tearDown" is-config="true" duration-ms="788" started-at="2018-12-18T23:46:35Z" finished-at="2018-12-18T23:46:36Z">
+        </test-method> <!-- LogoutTest -->
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:com.training.sanity.tests.LogOut_ELTC_016@6325a3ee]" name="CloseBrowser" is-config="true" duration-ms="1876" started-at="2019-10-25T22:54:03 IST" finished-at="2019-10-25T22:54:05 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="setUp" is-config="true" duration-ms="4885" started-at="2018-12-18T23:46:36Z" finished-at="2018-12-18T23:46:41Z">
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- com.training.sanity.tests.LogOut_ELTC_016 -->
+    </test> <!-- LogOut_ELTC_016 -->
+    <test name="AdminLogin_ELTC_017" duration-ms="19792" started-at="2019-10-25T22:54:05 IST" finished-at="2019-10-25T22:54:25 IST">
+      <class name="com.training.sanity.tests.AdminLogin_ELTC_017">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.training.sanity.tests.AdminLogin_ELTC_017@3b084709]" name="setup" is-config="true" duration-ms="2" started-at="2019-10-25T22:54:05 IST" finished-at="2019-10-25T22:54:05 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginDBTest(java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="loginDBTest" duration-ms="3104" started-at="2018-12-18T23:46:41Z" data-provider="excel-inputs" finished-at="2018-12-18T23:46:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[naveen]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[testing@123]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="LaunchURLd()[pri:0, instance:com.training.sanity.tests.AdminLogin_ELTC_017@3b084709]" name="LaunchURLd" is-config="true" duration-ms="12144" started-at="2019-10-25T22:54:05 IST" finished-at="2019-10-25T22:54:17 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginDBTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="tearDown" is-config="true" duration-ms="767" started-at="2018-12-18T23:46:44Z" finished-at="2018-12-18T23:46:45Z">
+        </test-method> <!-- LaunchURLd -->
+        <test-method status="PASS" signature="AdminLogin()[pri:0, instance:com.training.sanity.tests.AdminLogin_ELTC_017@3b084709]" name="AdminLogin" duration-ms="5696" started-at="2019-10-25T22:54:17 IST" finished-at="2019-10-25T22:54:23 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="setUp" is-config="true" duration-ms="5306" started-at="2018-12-18T23:46:45Z" finished-at="2018-12-18T23:46:50Z">
+        </test-method> <!-- AdminLogin -->
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:com.training.sanity.tests.AdminLogin_ELTC_017@3b084709]" name="CloseBrowser" is-config="true" duration-ms="1938" started-at="2019-10-25T22:54:23 IST" finished-at="2019-10-25T22:54:25 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginDBTest(java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="loginDBTest" duration-ms="2595" started-at="2018-12-18T23:46:50Z" data-provider="excel-inputs" finished-at="2018-12-18T23:46:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[delete]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[delete]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- com.training.sanity.tests.AdminLogin_ELTC_017 -->
+    </test> <!-- AdminLogin_ELTC_017 -->
+    <test name="ChangePassword_ELTC_018" duration-ms="27761" started-at="2019-10-25T22:54:25 IST" finished-at="2019-10-25T22:54:53 IST">
+      <class name="com.training.sanity.tests.ChangePassword_ELTC_018">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.training.sanity.tests.ChangePassword_ELTC_018@30b8a058]" name="setup" is-config="true" duration-ms="2" started-at="2019-10-25T22:54:25 IST" finished-at="2019-10-25T22:54:25 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginDBTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="tearDown" is-config="true" duration-ms="795" started-at="2018-12-18T23:46:53Z" finished-at="2018-12-18T23:46:53Z">
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.training.sanity.tests.ChangePassword_ELTC_018@30b8a058]" name="beforeMethod" is-config="true" duration-ms="15184" started-at="2019-10-25T22:54:25 IST" finished-at="2019-10-25T22:54:40 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.training.regression.tests.LoginExcelTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="ChangePassword()[pri:0, instance:com.training.sanity.tests.ChangePassword_ELTC_018@30b8a058]" name="ChangePassword" duration-ms="10596" started-at="2019-10-25T22:54:40 IST" finished-at="2019-10-25T22:54:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangePassword -->
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:com.training.sanity.tests.ChangePassword_ELTC_018@30b8a058]" name="CloseBrowser" is-config="true" duration-ms="1961" started-at="2019-10-25T22:54:51 IST" finished-at="2019-10-25T22:54:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- com.training.sanity.tests.ChangePassword_ELTC_018 -->
+    </test> <!-- ChangePassword_ELTC_018 -->
+  </suite> <!-- eLearning test Suite -->
 </testng-results>
