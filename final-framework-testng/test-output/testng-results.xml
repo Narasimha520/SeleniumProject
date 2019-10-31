@@ -1,69 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="eLearning test Suite" duration-ms="75106" started-at="2019-10-25T22:53:37 IST" finished-at="2019-10-25T22:54:53 IST">
+  <suite name="Default suite" duration-ms="19451" started-at="2019-10-31T15:47:52 IST" finished-at="2019-10-31T15:48:11 IST">
     <groups>
     </groups>
-    <test name="LogOut_ELTC_016" duration-ms="27393" started-at="2019-10-25T22:53:37 IST" finished-at="2019-10-25T22:54:05 IST">
-      <class name="com.training.sanity.tests.LogOut_ELTC_016">
-        <test-method status="PASS" signature="Setup()[pri:0, instance:com.training.sanity.tests.LogOut_ELTC_016@6325a3ee]" name="Setup" is-config="true" duration-ms="29" started-at="2019-10-25T22:53:38 IST" finished-at="2019-10-25T22:53:38 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method status="PASS" signature="LaunchURL()[pri:0, instance:com.training.sanity.tests.LogOut_ELTC_016@6325a3ee]" name="LaunchURL" is-config="true" duration-ms="17203" started-at="2019-10-25T22:53:38 IST" finished-at="2019-10-25T22:53:55 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchURL -->
-        <test-method status="PASS" signature="LogoutTest()[pri:0, instance:com.training.sanity.tests.LogOut_ELTC_016@6325a3ee]" name="LogoutTest" duration-ms="8221" started-at="2019-10-25T22:53:55 IST" finished-at="2019-10-25T22:54:03 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LogoutTest -->
-        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:com.training.sanity.tests.LogOut_ELTC_016@6325a3ee]" name="CloseBrowser" is-config="true" duration-ms="1876" started-at="2019-10-25T22:54:03 IST" finished-at="2019-10-25T22:54:05 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CloseBrowser -->
-      </class> <!-- com.training.sanity.tests.LogOut_ELTC_016 -->
-    </test> <!-- LogOut_ELTC_016 -->
-    <test name="AdminLogin_ELTC_017" duration-ms="19792" started-at="2019-10-25T22:54:05 IST" finished-at="2019-10-25T22:54:25 IST">
-      <class name="com.training.sanity.tests.AdminLogin_ELTC_017">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.training.sanity.tests.AdminLogin_ELTC_017@3b084709]" name="setup" is-config="true" duration-ms="2" started-at="2019-10-25T22:54:05 IST" finished-at="2019-10-25T22:54:05 IST">
+    <test name="Default test" duration-ms="19451" started-at="2019-10-31T15:47:52 IST" finished-at="2019-10-31T15:48:11 IST">
+      <class name="com.training.sanity.tests.CommentTask_ELTC_046">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.training.sanity.tests.CommentTask_ELTC_046@3a5ed7a6]" name="setup" is-config="true" duration-ms="15" started-at="2019-10-31T15:47:52 IST" finished-at="2019-10-31T15:47:52 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="LaunchURLd()[pri:0, instance:com.training.sanity.tests.AdminLogin_ELTC_017@3b084709]" name="LaunchURLd" is-config="true" duration-ms="12144" started-at="2019-10-25T22:54:05 IST" finished-at="2019-10-25T22:54:17 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchURLd -->
-        <test-method status="PASS" signature="AdminLogin()[pri:0, instance:com.training.sanity.tests.AdminLogin_ELTC_017@3b084709]" name="AdminLogin" duration-ms="5696" started-at="2019-10-25T22:54:17 IST" finished-at="2019-10-25T22:54:23 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AdminLogin -->
-        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:com.training.sanity.tests.AdminLogin_ELTC_017@3b084709]" name="CloseBrowser" is-config="true" duration-ms="1938" started-at="2019-10-25T22:54:23 IST" finished-at="2019-10-25T22:54:25 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CloseBrowser -->
-      </class> <!-- com.training.sanity.tests.AdminLogin_ELTC_017 -->
-    </test> <!-- AdminLogin_ELTC_017 -->
-    <test name="ChangePassword_ELTC_018" duration-ms="27761" started-at="2019-10-25T22:54:25 IST" finished-at="2019-10-25T22:54:53 IST">
-      <class name="com.training.sanity.tests.ChangePassword_ELTC_018">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.training.sanity.tests.ChangePassword_ELTC_018@30b8a058]" name="setup" is-config="true" duration-ms="2" started-at="2019-10-25T22:54:25 IST" finished-at="2019-10-25T22:54:25 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.training.sanity.tests.ChangePassword_ELTC_018@30b8a058]" name="beforeMethod" is-config="true" duration-ms="15184" started-at="2019-10-25T22:54:25 IST" finished-at="2019-10-25T22:54:40 IST">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.training.sanity.tests.CommentTask_ELTC_046@3a5ed7a6]" name="beforeMethod" is-config="true" duration-ms="10099" started-at="2019-10-31T15:47:52 IST" finished-at="2019-10-31T15:48:02 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="ChangePassword()[pri:0, instance:com.training.sanity.tests.ChangePassword_ELTC_018@30b8a058]" name="ChangePassword" duration-ms="10596" started-at="2019-10-25T22:54:40 IST" finished-at="2019-10-25T22:54:51 IST">
+        <test-method status="PASS" signature="UseSubscribeCourse()[pri:0, instance:com.training.sanity.tests.CommentTask_ELTC_046@3a5ed7a6]" name="UseSubscribeCourse" duration-ms="9275" started-at="2019-10-31T15:48:02 IST" finished-at="2019-10-31T15:48:11 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ChangePassword -->
-        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:com.training.sanity.tests.ChangePassword_ELTC_018@30b8a058]" name="CloseBrowser" is-config="true" duration-ms="1961" started-at="2019-10-25T22:54:51 IST" finished-at="2019-10-25T22:54:53 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CloseBrowser -->
-      </class> <!-- com.training.sanity.tests.ChangePassword_ELTC_018 -->
-    </test> <!-- ChangePassword_ELTC_018 -->
-  </suite> <!-- eLearning test Suite -->
+        </test-method> <!-- UseSubscribeCourse -->
+      </class> <!-- com.training.sanity.tests.CommentTask_ELTC_046 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
