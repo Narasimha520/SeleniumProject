@@ -2,7 +2,9 @@ package com.training.sanity.tests;
 
 import org.testng.annotations.Test;
 
-import com.training.pom.ChangePW_ELTC_018_POM;
+import com.training.pom.Elearing_ELTC_018_POM;
+import com.training.pom.Elearning_CreateCategory_ELTC_047_POM;
+import com.training.pom.Elearning_CreateCourse_ELTC_047_POM;
 import com.training.pom.Login_ELTC_POM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
@@ -23,11 +25,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 
-public class ChangePassword_ELTC_018 {
+public class Elearning_ELTC_047 {
 	private WebDriver driver;
 	private String baseUrl;
 	private Login_ELTC_POM loginPOM;
-	private ChangePW_ELTC_018_POM changePassword;
+	private Elearning_CreateCategory_ELTC_047_POM CreateCategory;
+	private Elearning_CreateCourse_ELTC_047_POM CreateCourse;
 	private static Properties properties;
 	
 	 @BeforeClass
@@ -40,30 +43,43 @@ public class ChangePassword_ELTC_018 {
 	 public void beforeMethod() {
 	  driver = DriverFactory.getDriver(DriverNames.CHROME);
 	  loginPOM = new Login_ELTC_POM(driver);
-	  changePassword=new ChangePW_ELTC_018_POM(driver);
+	  CreateCategory=new Elearning_CreateCategory_ELTC_047_POM(driver);
+	  CreateCourse=new Elearning_CreateCourse_ELTC_047_POM(driver);
 	  baseUrl = properties.getProperty("baseURL");
 	  // open the browser 
 	  driver.get(baseUrl);
 	 }
 	 
-	 @AfterMethod
+	@AfterMethod
 	  public void CloseBrowser() throws Exception {
 			Thread.sleep(1000);
 			driver.quit();
-		
-	  }
-	 
+	}
+		 
 	 @Test
-	 public void ChangePassword() {
-	 		loginPOM.sendUserName("rev");
-			loginPOM.sendPassword("rev321");
+	 public void CreateCategoryAndCourse() {
+	 		//Login
+		 	loginPOM.sendUserName("admin");
+			loginPOM.sendPassword("admin@123");
 			loginPOM.clickLoginBtn(); 
-	 		changePassword.clickEditProfile();
-			changePassword.setNewpassword("rev123");
-			changePassword.setConfirmpassword("rev123");
-			changePassword.ClickSave();
-			changePassword.msgdislay();
+			//Create Category
+			CreateCategory.ClickCourseCategoriesLink();
+			CreateCategory.ClickAddCateLink();
+			CreateCategory.SendCategoryCode("nl102910");
+			CreateCategory.SendCategoryName("Automation10");
+			CreateCategory.AddCategoryBtn();
+			CreateCategory.MsgAddCatCheck();
+			//Create a Course
+			CreateCourse.ClickAdminstrationlink();
+			CreateCourse.ClickCreateCourseLink();
+			CreateCourse.SendTitle("SelemiumTest10");
+			CreateCourse.SendCode("nl103010");
+			CreateCourse.SelectCategory();
+			CreateCourse.SelectTeacher();
+			CreateCourse.SelectLanguage();
+			CreateCourse.CreateCourse();
+			CreateCourse.MsgCourseCheck();
+										
 	 }
-	 
-  
+	   
   }

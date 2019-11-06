@@ -13,10 +13,10 @@ import org.testng.Assert;
 
 
 
-public class RegUserDB_ELTC_078_POM {
+public class Elearning_ELTC_077_POM {
 
 	private WebDriver driver; 
-	public RegUserDB_ELTC_078_POM(WebDriver driver) {
+	public Elearning_ELTC_077_POM(WebDriver driver) {
 	this.driver = driver; 
 	PageFactory.initElements(driver, this);
 	}
@@ -24,13 +24,9 @@ public class RegUserDB_ELTC_078_POM {
 	@FindBy (xpath="//a[contains(text(),'Sign up!')]")
 	private WebElement SingUpLink;
 	
-	@FindBy (xpath="(//input[@class='register-profile'])[2]")
-	private WebElement TeacherRadioBtn;
-	
 	@FindBy(name="firstname")
 	private WebElement FirstName;
 	
-
 	@FindBy(name="lastname")
 	private WebElement LastName;
 	
@@ -55,12 +51,11 @@ public class RegUserDB_ELTC_078_POM {
 	@FindBy (xpath="//span[contains(text(),'English')]")
 	private WebElement SelectLanguageValue;
 	
+	@FindBy (xpath="(//input[@class='register-profile'])[2]")
+	private WebElement RadioBtn;
 	
 	@FindBy(name="submit")
 	private WebElement RegisterBtn;
-	
-	@FindBy(xpath="//section[@id='cm-content']//p[1]")
-	private WebElement MsgRegisterSuccess;
 	
 	public void ClickSignUplink() {
 	this.SingUpLink.click();
@@ -107,26 +102,26 @@ public class RegUserDB_ELTC_078_POM {
 		this.SelectLanguageValue.click();
 	}
 	
-	public void ClickRadioBtn()
-	{
-		this.TeacherRadioBtn.click();
+	public void ClickRadioBtn()	{
+		
+		this.RadioBtn.click();
 		
 	}
 	
-	  public void ClickRegistrationBtn() {
+	  public void ClickRegisterBtn() {
 			
 			this.RegisterBtn.click();
 			
 	  }
 	 public void MsgRegistrationCheck() 
 		{ 
-			String MsgExp = driver.findElement(By.xpath("//section[@id='cm-content']//p[1]")).getText();
+			String MsgExp = driver.findElement(By.xpath("//div[@class='alert alert-warning']")).getText();
 			
-			String MsgAct= driver.findElement(By.xpath("//section[@id='cm-content']//p[1]")).getText();
+			String MsgAcu = driver.findElement(By.xpath("//div[@class='alert alert-warning']")).getText();
 			
 			System.out.println(MsgExp);
 			
-			Assert.assertEquals(MsgExp, MsgAct);
+			Assert.assertEquals(MsgExp, MsgAcu);
 				
 		}
 

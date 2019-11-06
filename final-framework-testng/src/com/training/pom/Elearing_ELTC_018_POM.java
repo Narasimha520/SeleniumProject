@@ -9,10 +9,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-public class ChangePW_ELTC_018_POM {
+public class Elearing_ELTC_018_POM {
 
 	private WebDriver driver; 
-	public ChangePW_ELTC_018_POM(WebDriver driver) {
+	public Elearing_ELTC_018_POM(WebDriver driver) {
 	this.driver = driver; 
 	PageFactory.initElements(driver, this);
 	}

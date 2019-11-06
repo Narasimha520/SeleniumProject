@@ -2,11 +2,11 @@ package com.training.sanity.tests;
 
 import org.testng.annotations.Test;
 
-import com.training.pom.AddUserCourse_ELTC_048_POM;
-import com.training.pom.AddUser_ELTC_048_POM;
-import com.training.pom.ChangePW_ELTC_018_POM;
-import com.training.pom.CreateCategory_ELTC_047_POM;
-import com.training.pom.CreateCourse_ELTC_047_POM;
+import com.training.pom.Elearing_AddCourse_ELTC_048_POM;
+import com.training.pom.Elearning_AddUser_ELTC_048_POM;
+import com.training.pom.Elearing_ELTC_018_POM;
+import com.training.pom.Elearning_CreateCategory_ELTC_047_POM;
+import com.training.pom.Elearning_CreateCourse_ELTC_047_POM;
 import com.training.pom.Login_ELTC_POM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
@@ -27,12 +27,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 
-public class AddUserAndAddCourseToUser_ELTC_48 {
+public class Elearning_ELTC_48 {
 	private WebDriver driver;
 	private String baseUrl;
 	private Login_ELTC_POM loginPOM;
-	private AddUser_ELTC_048_POM AddUser;
-	private AddUserCourse_ELTC_048_POM AddUserCourse;
+	private Elearning_AddUser_ELTC_048_POM AddUser;
+	private Elearing_AddCourse_ELTC_048_POM AddUserCourse;
 	private static Properties properties;
 	
 	 @BeforeClass
@@ -45,8 +45,8 @@ public class AddUserAndAddCourseToUser_ELTC_48 {
 	 public void beforeMethod() {
 	  driver = DriverFactory.getDriver(DriverNames.CHROME);
 	  loginPOM = new Login_ELTC_POM(driver);
-	  AddUser=new AddUser_ELTC_048_POM(driver);
-	  AddUserCourse=new AddUserCourse_ELTC_048_POM(driver);
+	  AddUser=new Elearning_AddUser_ELTC_048_POM(driver);
+	  AddUserCourse=new Elearing_AddCourse_ELTC_048_POM(driver);
 	  baseUrl = properties.getProperty("baseURL");
 	  // open the browser 
 	  driver.get(baseUrl);

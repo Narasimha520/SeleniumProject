@@ -2,8 +2,8 @@ package com.training.sanity.tests;
 
 import org.testng.annotations.Test;
 
-import com.training.dataproviders.LoginDataProviders;
-import com.training.pom.RegMultipleUser_ELTC_076_POM;
+import com.training.pom.Elearning_ELTC_046_POM;
+import com.training.pom.Login_ELTC_POM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
@@ -14,7 +14,6 @@ import org.testng.annotations.BeforeClass;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -24,10 +23,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 
-public class RegMultipleUser_ELTC_076 {
+public class Elearning_ELTC_046 {
 	private WebDriver driver;
 	private String baseUrl;
-	private RegMultipleUser_ELTC_076_POM UserRegistration;
+	private Login_ELTC_POM loginPOM;
+	private Elearning_ELTC_046_POM SubscribeCourse;
+	
 	private static Properties properties;
 	
 	 @BeforeClass
@@ -39,37 +40,33 @@ public class RegMultipleUser_ELTC_076 {
 	 @BeforeMethod
 	 public void beforeMethod() {
 	  driver = DriverFactory.getDriver(DriverNames.CHROME);
-	  UserRegistration=new RegMultipleUser_ELTC_076_POM(driver);
+	  loginPOM = new Login_ELTC_POM(driver);
+	  SubscribeCourse=new Elearning_ELTC_046_POM(driver);
 	  baseUrl = properties.getProperty("baseURL");
 	  // open the browser 
 	  driver.get(baseUrl);
-	  
-	  }
+	 }
 	 
-	 @AfterMethod
+	@AfterMethod
 	  public void CloseBrowser() throws Exception {
 			Thread.sleep(1000);
 			driver.quit();
 		
 	  }
 	 
-	 @Test(dataProvider = "excel-inputs", dataProviderClass = LoginDataProviders.class)
-	 public void UserRegistration(String FirstName,String LastName, String eMail, String UserName, 
-			 String Password, String ConfirmPassword, String Phone, String Language  ) {
-		 
-		 UserRegistration.ClickSignUplink();
-		 UserRegistration.SendFirstName(FirstName);
-		 UserRegistration.SendLastName(LastName);
-		 UserRegistration.SendeMail(eMail);
-		 UserRegistration.SendUserName(UserName);
-		 UserRegistration.SendPassword(Password);
-		 UserRegistration.SendConfirmPassword(ConfirmPassword);
-		 UserRegistration.SendPhone(Phone);
-		 UserRegistration.SelectLanguage(Language);
-		 UserRegistration.ClickRadioBtn();
-		 UserRegistration.ClickRegistrationBtn();
-		 UserRegistration.MsgRegistrationCheck();
-		}
-	 
-  
-  }
+	 @Test
+	 public void UserSubscribeCourse() {
+	 		loginPOM.sendUserName("nl04");
+			loginPOM.sendPassword("test1234");
+			loginPOM.clickLoginBtn(); 
+			SubscribeCourse.ClickCatalog();
+			SubscribeCourse.SendSearchText("testing");
+			SubscribeCourse.ClickSearchButton();
+			SubscribeCourse.ClickCourseSubscribe();
+			SubscribeCourse.ClickMycourselink();
+	 		SubscribeCourse.CourseAssignmentCheck();
+	 		//Note as per test cases - not find task from step 6..We discussed with Shiv and shown the flow in application;
+	 		//Can't automation rest of the steps
+	 		
+    }
+}

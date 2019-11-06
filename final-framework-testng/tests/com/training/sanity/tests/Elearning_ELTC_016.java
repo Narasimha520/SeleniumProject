@@ -21,7 +21,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class LogOut_ELTC_016 {
+public class Elearning_ELTC_016 {
 	private WebDriver driver;
 	private String baseUrl;
 	private Login_ELTC_POM loginPOM;

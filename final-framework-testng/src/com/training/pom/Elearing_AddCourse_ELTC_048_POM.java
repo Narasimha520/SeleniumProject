@@ -12,10 +12,10 @@ import org.testng.Assert;
 
 
 
-public class AddUserCourse_ELTC_048_POM {
+public class Elearing_AddCourse_ELTC_048_POM {
 
 	private WebDriver driver; 
-	public AddUserCourse_ELTC_048_POM(WebDriver driver) {
+	public Elearing_AddCourse_ELTC_048_POM(WebDriver driver) {
 	this.driver = driver; 
 	PageFactory.initElements(driver, this);
 	}

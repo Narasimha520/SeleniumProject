@@ -13,10 +13,10 @@ import org.testng.Assert;
 
 
 
-public class RegMultipleUser_ELTC_076_POM {
+public class Elearning_DB_ELTC_078_POM {
 
 	private WebDriver driver; 
-	public RegMultipleUser_ELTC_076_POM(WebDriver driver) {
+	public Elearning_DB_ELTC_078_POM(WebDriver driver) {
 	this.driver = driver; 
 	PageFactory.initElements(driver, this);
 	}
@@ -24,9 +24,13 @@ public class RegMultipleUser_ELTC_076_POM {
 	@FindBy (xpath="//a[contains(text(),'Sign up!')]")
 	private WebElement SingUpLink;
 	
+	@FindBy (xpath="(//input[@class='register-profile'])[2]")
+	private WebElement TeacherRadioBtn;
+	
 	@FindBy(name="firstname")
 	private WebElement FirstName;
 	
+
 	@FindBy(name="lastname")
 	private WebElement LastName;
 	
@@ -51,8 +55,6 @@ public class RegMultipleUser_ELTC_076_POM {
 	@FindBy (xpath="//span[contains(text(),'English')]")
 	private WebElement SelectLanguageValue;
 	
-	@FindBy (xpath="(//input[@class='register-profile'])[2]")
-	private WebElement TeacherRadioBtn;
 	
 	@FindBy(name="submit")
 	private WebElement RegisterBtn;
@@ -119,10 +121,12 @@ public class RegMultipleUser_ELTC_076_POM {
 	 public void MsgRegistrationCheck() 
 		{ 
 			String MsgExp = driver.findElement(By.xpath("//section[@id='cm-content']//p[1]")).getText();
-								
+			
+			String MsgAct= driver.findElement(By.xpath("//section[@id='cm-content']//p[1]")).getText();
+			
 			System.out.println(MsgExp);
 			
-			Assert.assertEquals(MsgExp, "Your personal settings have been registered.");
+			Assert.assertEquals(MsgExp, MsgAct);
 				
 		}
 

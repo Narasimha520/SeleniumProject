@@ -9,10 +9,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-public class CreateCategory_ELTC_047_POM {
+public class Elearning_CreateCategory_ELTC_047_POM {
 
 	private WebDriver driver; 
-	public CreateCategory_ELTC_047_POM(WebDriver driver) {
+	public Elearning_CreateCategory_ELTC_047_POM(WebDriver driver) {
 	this.driver = driver; 
 	PageFactory.initElements(driver, this);
 	}

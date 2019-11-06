@@ -3,8 +3,7 @@ package com.training.sanity.tests;
 import org.testng.annotations.Test;
 
 import com.training.dataproviders.LoginDataProviders;
-import com.training.pom.RegUserDB_ELTC_078_POM;
-import com.training.pom.RegMultipleUser_ELTC_076_POM;
+import com.training.pom.Elearning_ELTC_076_POM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
@@ -25,10 +24,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 
-public class RegUserDB_ELTC_078 {
+public class Elearning_ELTC_076 {
 	private WebDriver driver;
 	private String baseUrl;
-	private RegUserDB_ELTC_078_POM UserRegistration;
+	private Elearning_ELTC_076_POM UserRegistration;
 	private static Properties properties;
 	
 	 @BeforeClass
@@ -40,7 +39,7 @@ public class RegUserDB_ELTC_078 {
 	 @BeforeMethod
 	 public void beforeMethod() {
 	  driver = DriverFactory.getDriver(DriverNames.CHROME);
-	  UserRegistration=new RegUserDB_ELTC_078_POM(driver);
+	  UserRegistration=new Elearning_ELTC_076_POM(driver);
 	  baseUrl = properties.getProperty("baseURL");
 	  // open the browser 
 	  driver.get(baseUrl);
@@ -54,7 +53,7 @@ public class RegUserDB_ELTC_078 {
 		
 	  }
 	 
-	 @Test(dataProvider ="db-inputs", dataProviderClass = LoginDataProviders.class)
+	 @Test(dataProvider = "excel-inputs", dataProviderClass = LoginDataProviders.class)
 	 public void UserRegistration(String FirstName,String LastName, String eMail, String UserName, 
 			 String Password, String ConfirmPassword, String Phone, String Language  ) {
 		 

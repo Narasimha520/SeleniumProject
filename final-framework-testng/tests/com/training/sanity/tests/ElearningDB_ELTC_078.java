@@ -3,8 +3,8 @@ package com.training.sanity.tests;
 import org.testng.annotations.Test;
 
 import com.training.dataproviders.LoginDataProviders;
-import com.training.pom.InvalidRegMultipleUser_ELTC_077_POM;
-import com.training.pom.RegMultipleUser_ELTC_076_POM;
+import com.training.pom.Elearning_DB_ELTC_078_POM;
+import com.training.pom.Elearning_ELTC_076_POM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
@@ -25,10 +25,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 
-public class InvalidRegMultipleUser_ELTC_077 {
+public class ElearningDB_ELTC_078 {
 	private WebDriver driver;
 	private String baseUrl;
-	private InvalidRegMultipleUser_ELTC_077_POM InvalidUserRegistration;
+	private Elearning_DB_ELTC_078_POM UserRegistration;
 	private static Properties properties;
 	
 	 @BeforeClass
@@ -40,7 +40,7 @@ public class InvalidRegMultipleUser_ELTC_077 {
 	 @BeforeMethod
 	 public void beforeMethod() {
 	  driver = DriverFactory.getDriver(DriverNames.CHROME);
-	  InvalidUserRegistration=new InvalidRegMultipleUser_ELTC_077_POM(driver);
+	  UserRegistration=new Elearning_DB_ELTC_078_POM(driver);
 	  baseUrl = properties.getProperty("baseURL");
 	  // open the browser 
 	  driver.get(baseUrl);
@@ -54,24 +54,23 @@ public class InvalidRegMultipleUser_ELTC_077 {
 		
 	  }
 	 
-	 @Test(dataProvider ="excel-inputs", dataProviderClass = LoginDataProviders.class)
-	 public void InvalidUserRegistration(String FirstName,String LastName, String eMail, String UserName, 
+	 @Test(dataProvider ="db-inputs", dataProviderClass = LoginDataProviders.class)
+	 public void UserRegistration(String FirstName,String LastName, String eMail, String UserName, 
 			 String Password, String ConfirmPassword, String Phone, String Language  ) {
 		 
-		 InvalidUserRegistration.ClickSignUplink();
-		 InvalidUserRegistration.SendFirstName(FirstName);
-		 InvalidUserRegistration.SendLastName(LastName);
-		 InvalidUserRegistration.SendeMail(eMail);
-		 InvalidUserRegistration.SendUserName(UserName);
-		 InvalidUserRegistration.SendPassword(Password);
-		 InvalidUserRegistration.SendConfirmPassword(ConfirmPassword);
-		 InvalidUserRegistration.SendPhone(Phone);
-		 InvalidUserRegistration.SelectLanguage(Language);
-		 InvalidUserRegistration.ClickRadioBtn();
-		 InvalidUserRegistration.ClickRegisterBtn();
-		 InvalidUserRegistration.MsgRegistrationCheck();
-		 
-	 	}
+		 UserRegistration.ClickSignUplink();
+		 UserRegistration.SendFirstName(FirstName);
+		 UserRegistration.SendLastName(LastName);
+		 UserRegistration.SendeMail(eMail);
+		 UserRegistration.SendUserName(UserName);
+		 UserRegistration.SendPassword(Password);
+		 UserRegistration.SendConfirmPassword(ConfirmPassword);
+		 UserRegistration.SendPhone(Phone);
+		 UserRegistration.SelectLanguage(Language);
+		 UserRegistration.ClickRadioBtn();
+		 UserRegistration.ClickRegistrationBtn();
+		 UserRegistration.MsgRegistrationCheck();
+		}
 	 
   
   }

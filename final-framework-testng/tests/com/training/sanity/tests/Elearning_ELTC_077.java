@@ -2,8 +2,9 @@ package com.training.sanity.tests;
 
 import org.testng.annotations.Test;
 
-import com.training.pom.UserSubscribeCourse_ELTC_046_POM;
-import com.training.pom.Login_ELTC_POM;
+import com.training.dataproviders.LoginDataProviders;
+import com.training.pom.Elearning_ELTC_077_POM;
+import com.training.pom.Elearning_ELTC_076_POM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
@@ -14,6 +15,7 @@ import org.testng.annotations.BeforeClass;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -23,12 +25,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 
-public class CourseAssignmentCheck_ELTC_046 {
+public class Elearning_ELTC_077 {
 	private WebDriver driver;
 	private String baseUrl;
-	private Login_ELTC_POM loginPOM;
-	private UserSubscribeCourse_ELTC_046_POM SubscribeCourse;
-	
+	private Elearning_ELTC_077_POM InvalidUserRegistration;
 	private static Properties properties;
 	
 	 @BeforeClass
@@ -40,33 +40,38 @@ public class CourseAssignmentCheck_ELTC_046 {
 	 @BeforeMethod
 	 public void beforeMethod() {
 	  driver = DriverFactory.getDriver(DriverNames.CHROME);
-	  loginPOM = new Login_ELTC_POM(driver);
-	  SubscribeCourse=new UserSubscribeCourse_ELTC_046_POM(driver);
+	  InvalidUserRegistration=new Elearning_ELTC_077_POM(driver);
 	  baseUrl = properties.getProperty("baseURL");
 	  // open the browser 
 	  driver.get(baseUrl);
-	 }
+	  
+	  }
 	 
-	@AfterMethod
+	 @AfterMethod
 	  public void CloseBrowser() throws Exception {
 			Thread.sleep(1000);
 			driver.quit();
 		
 	  }
 	 
-	 @Test
-	 public void UserSubscribeCourse() {
-	 		loginPOM.sendUserName("nl04");
-			loginPOM.sendPassword("test1234");
-			loginPOM.clickLoginBtn(); 
-			SubscribeCourse.ClickCatalog();
-			SubscribeCourse.SendSearchText("testing");
-			SubscribeCourse.ClickSearchButton();
-			SubscribeCourse.ClickCourseSubscribe();
-			SubscribeCourse.ClickMycourselink();
-	 		SubscribeCourse.CourseAssignmentCheck();
-	 		//Note as per test cases - not find task from step 6..We discussed with Shiv and shown the flow in application;
-	 		//Can't automation rest of the steps
-	 		
-    }
-}
+	 @Test(dataProvider ="excel-inputs", dataProviderClass = LoginDataProviders.class)
+	 public void InvalidUserRegistration(String FirstName,String LastName, String eMail, String UserName, 
+			 String Password, String ConfirmPassword, String Phone, String Language  ) {
+		 
+		 InvalidUserRegistration.ClickSignUplink();
+		 InvalidUserRegistration.SendFirstName(FirstName);
+		 InvalidUserRegistration.SendLastName(LastName);
+		 InvalidUserRegistration.SendeMail(eMail);
+		 InvalidUserRegistration.SendUserName(UserName);
+		 InvalidUserRegistration.SendPassword(Password);
+		 InvalidUserRegistration.SendConfirmPassword(ConfirmPassword);
+		 InvalidUserRegistration.SendPhone(Phone);
+		 InvalidUserRegistration.SelectLanguage(Language);
+		 InvalidUserRegistration.ClickRadioBtn();
+		 InvalidUserRegistration.ClickRegisterBtn();
+		 InvalidUserRegistration.MsgRegistrationCheck();
+		 
+	 	}
+	 
+  
+  }
