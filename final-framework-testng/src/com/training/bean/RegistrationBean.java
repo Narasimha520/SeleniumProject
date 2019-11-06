@@ -1,54 +1,23 @@
 package com.training.bean;
 
-/**
- * 
- * @author Naveen
- * @see this class shall get the bean data 
- */
-public class DBBean {
-	private String url; 
-	private String driver; 
-	private String FirstName; 
+public class RegistrationBean {
+	
+	private String FirstName;
 	private String LastName;
 	private String eMail;
 	private String UserName;
 	private String Password;
-	private String ConfirmPassword;
-	private String Phone;
-	private String Language;
+    private String ConfirmPassword;
+    private String Phone;
+    private String Language;
 	
-	
-	public DBBean(){}
-	
-	public DBBean(String url, String driver, String FirstName, String LastName, String eMail, String UserName,
-			String Password, String ConfirmPassword, String Phone, String Language) {
+	public RegistrationBean() {
+	}
+
+	public RegistrationBean(String FirstName) {
 		super();
-		this.url = url;
-		this.driver = driver;
+		
 		this.FirstName = FirstName;
-		this.LastName = LastName;
-		this.eMail = eMail;
-		this.UserName = UserName;
-		this.Password = Password;
-		this.ConfirmPassword = ConfirmPassword;
-		this.Phone = Phone;
-		this.Language = Language;
-	}
-
-	public String getUrl() {
-		return url;
-	}
-
-	public void setUrl(String url) {
-		this.url = url;
-	}
-
-	public String getDriver() {
-		return driver;
-	}
-
-	public void setDriver(String driver) {
-		this.driver = driver;
 	}
 
 	public String getFirstName() {
@@ -59,12 +28,14 @@ public class DBBean {
 		this.FirstName = FirstName;
 	}
 
+
+
 	public String getLastName() {
 		return LastName;
 	}
 
-	public void setLastName(String LastName) {
-		this.LastName = LastName;
+	public void setLastName(String lastName) {
+		LastName = lastName;
 	}
 
 	public String geteMail() {
@@ -114,7 +85,12 @@ public class DBBean {
 	public void setLanguage(String language) {
 		Language = language;
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "LoginBean [FirstName=" + FirstName + ", LastName=" + LastName + ", eMail=" + eMail 
+				+ " , UserName=" + UserName + ", Password=" + Password + ", ConfirmPassword=" 
+				+ ConfirmPassword + ", Phone=" + Phone + ",Language=" + Language + "]";
+	}
+
 }
